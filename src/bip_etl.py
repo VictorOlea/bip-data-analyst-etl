@@ -2,6 +2,7 @@ import pandas as pd
 from sqlalchemy import create_engine
 import time 
 
+#extracción-transformación-carga
 def etl():
     df_bip = pd.read_excel('../data/metro_bip.xlsx', sheet_name='Abiertos', skiprows=7)
     df_bip.drop(columns=["ENTIDAD", "HORARIO REFERENCIAL"], inplace=True)
@@ -15,10 +16,11 @@ def etl():
                     'NORTE': 'norte',
                     'LONGITUD': 'longitud',
                     'LATITUD': 'latitud'}, inplace=True)
-    
+    #guarda el dataframe en un archivo csv
     df_bip.to_csv('../result/centros_bip.csv', index=False)
     return df_bip
 
+#genera un documento excel, 1º hoja todos los datos, 2º ,3º...nº hoja, datos por comuna o línea
 def data_to_excel(df_bip, variable ,excel_name):
     excel_path = '../result/'
     excel_path_name = f'{excel_path}{excel_name}'
@@ -31,8 +33,10 @@ def data_to_excel(df_bip, variable ,excel_name):
             query.to_excel(writer, sheet_name = sheet_name, index=False)
     print(f"Data Loaded: {variable} in {excel_name}")
 
+#guarda los registros en una base de datos postgres
 def data_to_postgresql():
     df_bip = pd.read_csv('../result/centros_bip.csv')
+    #credenciales de conexión
     user = 'your user (postgres)'
     password = "your password"
     host = 'your host (localhost)'
@@ -46,7 +50,7 @@ def data_to_postgresql():
     
     try:
         conn = engine.connect()
-        
+        #agrega los datos a la tabla
         df_bip.to_sql(
             name = "your table name",
             con = engine,
