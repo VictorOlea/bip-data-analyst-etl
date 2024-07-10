@@ -3,11 +3,38 @@
 Un simple análisis de datos de los centros bip!
 
 Organización de carpetas:
-* data: documento excel de estudio
-* src: scripts de trabajo
-* result: productos obtenidos 
+
+- data: documento excel de estudio
+- src: scripts de trabajo
+- result: productos obtenidos
+
+### Excel de Datos
+
+---
+
+![Excel de Datos](data/excel-raw.JPG "Excel de Datos Crudo")
+
+### CSV de Datos Procesados
+
+---
+
+![CSV de Datos Procesados](result/csv-centrosBip.JPG "CSV de Datos Procesado")
+
+### Excel de Datos Por Comuna
+
+---
+
+![Excel de Datos por Comuna](result/excel-comunas.JPG "Excel de Datos por Comuna")
+
+### Excel de Datos Por Línea
+
+---
+
+![Excel de Datos por Línea](result/excel-lineas.JPG "Excel de Datos por Línea")
 
 ### Gráficos Matplotlib - Seaborn
+
+---
 
 ![Centros Bip! por Comuna](result/gráfico-centros-bip-por-comuna.png "Gráfico Centros Bip! por Comuna")
 
