@@ -1,6 +1,8 @@
-# Centros BiP! Analisis de datos y proceso ETL
+# Centros Bip! Análisis de Datos y Proceso ETL
 
-Un simple análisis de datos de los centros bip!
+Un simple análisis de datos de los centros bip! del sistema de transporte público de la ciudad de Santiago que integra tres modos de transporte: buses, Metro y MetroTren Nos.
+
+Los Centros bip! son oficinas especialmente habilitadas para vender y cargar las Tarjeta bip! Actualmente, existen 57 Centros bip! donde podrás comprar y cragar tu Tarjeta bip!, validar tus cargas remotas y consultar el saldo.
 
 Organización de carpetas:
 
